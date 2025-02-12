@@ -11,4 +11,4 @@ COPY /*.jar /path/in/container/
 EXPOSE 8080
 
 # Run the Java application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar",  "build/web/WEB-INF/lib"]
