@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Example</title>
+    <style>
+        #otherReason {
+            display: none;  /* Initially hidden */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>In case of any issue, please lodge a Complaint Here</h2>
+    <h4>Our Team will get back to you within two business days or faster-whichever comes first</h4>
+    <form action="#">
+        <label for="complaintType">Choose a complaint type:</label>
+        <select id="complaintType" name="complaintType" onchange="showTextbox()">
+            <option value="sel">Select</option>
+            <option value="HW">Hardware</option>
+            <option value="SW">Software</option>
+            <option value="other">Other</option>
+            
+        </select>
+        <br><br>
+
+        <div id="otherReason">
+            <label for="otherReasonText">Please specify your reason:</label>
+            <textarea id="otherReasonText" name="otherReasonText" rows="4" placeholder="Enter your reason..."></textarea>
+        </div>
+    </form>
+
+    <script>
+        function showTextbox() {
+            var complaintType = document.getElementById('complaintType').value;
+            var otherReason = document.getElementById('otherReason');
+            
+            // Show or hide the textbox based on the selected option
+            if (complaintType === "other") {
+                otherReason.style.display = "block"; // Show textbox
+            } else {
+                otherReason.style.display = "none";  // Hide textbox
+            }
+        }
+    </script>
+    </br></br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Example</title>
+    
+</head>
+<body>
+    <h2>Upload Profit and Loss</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="fileUpload">Choose a file to upload:</label>
+        <input type="file" id="fileUpload" name="fileUpload">
+        <br><br>
+        <input type="submit" value="Upload File">
+        <input type="reset" value="Clear">
+    </form>
+</br></br>
+<h2>Upload Balance Sheet</h2>
+<label for="branch">Select your Branch:</label>
+        <select id="branch" name="branch">
+            <option value="select">Select</option>
+            <option value="ho">Head Office</option>
+            <option value="rev">Revdanda Branch</option>
+            <option value="alibag">Alibag Branch</option>
+            <option value="roha">Roha Branch</option>
+            <option value="poynad">Poynad Branch</option>
+        </select>
+    </br></br>   
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="fileUpload">Choose a file to upload:</label>
+    <input type="file" id="fileUpload" name="fileUpload">
+    <br><br>
+    <input type="submit" value="Upload File">
+    <input type="reset" value="Clear">
+</form>
+</body>
+</html>
